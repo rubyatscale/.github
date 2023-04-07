@@ -16,4 +16,4 @@ We welcome and value your contributions to any and all of the repositories in th
 - [Gusto Blog Post - Laying the Cultural and Technical Foundation for Big Rails](https://engineering.gusto.com/laying-the-cultural-and-technical-foundation-for-big-rails/)
 - [Gusto Modularization Toolchain (describes some of the tools in this org and how they relate)](https://drive.google.com/file/d/11uhLDCN6OxdHq8eIlgAsj8FjmfZ0keTO/view?usp=sharing):
 
-![Gusto Modularization Tools](https://github.com/rubyatscale/.github/blob/main/image.jpg?raw=true)
+![Gusto Modularization Tools](https://github.com/rubyatscale/.github/blob/main/profile/rubyatscale-tools.png?raw=true)
