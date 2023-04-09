@@ -17,4 +17,4 @@ We welcome and value your contributions to any and all of the repositories in th
 - [Gusto Blog Post – A How-to Guide to Ruby Packs, Gusto’s Gem Ecosystem for Modularizing Ruby Applications](https://medium.com/gusto-engineering/a-how-to-guide-to-ruby-packs-gustos-gem-ecosystem-for-modularizing-ruby-applications-e236126b8c2c)
 - [Gusto Modularization Toolchain (describes some of the tools in this org and how they relate)](https://drive.google.com/file/d/11uhLDCN6OxdHq8eIlgAsj8FjmfZ0keTO/view?usp=sharing):
 
-![Gusto Modularization Tools](https://github.com/rubyatscale/.github/blob/main/profile/rubyatscale-tools.png?raw=true)
+![Gusto Modularization Tools](https://github.com/rubyatscale/.github/blob/main/profile/packs-tools.png?raw=true)
