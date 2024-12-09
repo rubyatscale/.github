@@ -4,7 +4,7 @@ Welcome! This is Gusto’s attempt at collecting a set of tools to help scale Ru
 
 This is README.md placeholder that we hope to improve over time!
 
-Join us in the [Ruby/Rails Modularity Slack Server](https://join.slack.com/t/rubymod/shared_invite/zt-23z6gq875-tjoDBhcjmvtSNzl7h_GcWg) to join a community of people interested in these problems! All are welcome.
+Join us in the [Ruby/Rails Modularity Discourse Server](https://rubyrailsmodularity.com/) to join a community of people interested in these problems! All are welcome.
 
 # Contributing
 
