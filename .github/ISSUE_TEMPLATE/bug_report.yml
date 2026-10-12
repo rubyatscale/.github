@@ -1,0 +1,102 @@
+name: Bug report
+description: Report something that isn't working as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The details below help us reproduce it locally.
+
+        **Issues in public repositories are visible to anyone.** Before posting, replace private details (file paths, pack and team names, private gem sources, internal image names, credentials) with placeholders like `packs/foo` and `TeamA`. A minimal example app is better than redacted output from a private one.
+
+        To report a security vulnerability, follow the [security policy](https://github.com/rubyatscale/.github/blob/main/SECURITY.md) instead of opening an issue.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug. Screenshots are welcome, e.g. for a VS Code extension.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps, commands, or code that shows the problem, including the exact command you ran. A link to a minimal example repository is ideal.
+      placeholder: |
+        1. Add `owner: TeamA` to `packs/foo/package.yml`
+        2. Run `bin/codeownership validate`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen instead.
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output
+      description: The full error message and backtrace, if there is one. For code-ownership-vscode, copy it from the "Code Ownership" channel in the Output panel. This is formatted as code automatically, so there's no need for backticks.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: |
+        For a gem, run `bundle info <gem>` and paste the end of the `Path:` line. For code_ownership, a platform suffix like `-arm64-darwin` means you got a precompiled build, and no suffix means it was compiled from source. For a CLI, paste the output of `pks --version` or `codeowners --version` and say how you installed it (DotSlash, installer script, or `cargo install --git`). For a VS Code extension or GitHub Action, give its version or `uses:` ref.
+      placeholder: e.g. code_ownership-2.2.0-aarch64-linux-musl, or pks 0.6.0 via DotSlash
+    validations:
+      required: true
+
+  - type: dropdown
+    id: latest
+    attributes:
+      label: Does this happen on the latest release?
+      options:
+        - "Yes"
+        - "No, only on an older version"
+        - "Haven't checked, or can't upgrade"
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        If Ruby is involved (any gem, or a VS Code extension that runs one), paste the output of `ruby -v`, `gem -v`, and `bundle -v`, run from your project directory. `ruby -v` already includes the platform, e.g. `[aarch64-linux-musl]`. Otherwise, give your OS and CPU. If this happens in Docker or CI, add the base image or runner.
+      placeholder: |
+        ruby 3.4.11 (2026-09-23 revision 592f1ffdb3) +PRISM [aarch64-linux-musl]
+        3.6.9
+        Bundler version 2.6.9
+        Docker image: ruby:3.4-alpine
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: other-versions
+    attributes:
+      label: Other relevant versions
+      description: Related tools and dependencies, such as Rails, packwerk, pks, RuboCop, or VS Code. For a VS Code extension, include the version of the CLI it runs.
+      placeholder: e.g. Rails 8.1.4, packwerk 3.3.1
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration
+      description: The contents of any config files involved, such as `package.yml`, `packwerk.yml`, `code_ownership.yml`, a team file, or a `.codeowner` file. Start each file with a comment naming it, and replace private pack and team names.
+      placeholder: |
+        # config/code_ownership.yml
+        owned_globs:
+          - '{app,packs}/**/*.rb'
+
+        # config/teams/team_a.yml
+        name: TeamA
+      render: yaml

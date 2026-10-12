@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/rubyatscale/.github/blob/main/SECURITY.md
+    about: Report security issues privately per our security policy, not as a public issue.
+  - name: Ruby/Rails Modularity Forum
+    url: https://rubyrailsmodularity.com/
+    about: Questions and discussion about modularizing Ruby and Rails apps. For a question about one tool, check its README or Discussions tab first.
