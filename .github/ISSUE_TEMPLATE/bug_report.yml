@@ -1,13 +1,14 @@
 name: Bug report
 description: Report something that isn't working as documented.
 labels: ["bug"]
+type: Bug
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to report a bug. The details below help us reproduce it locally.
 
-        Issues are public, so remove anything you don't want to share (internal paths, team names, credentials) from output and config before posting.
+        Issues in public repositories are visible to anyone, so remove anything you don't want to share (internal paths, team names, credentials) from output and config before posting.
 
   - type: textarea
     id: description
