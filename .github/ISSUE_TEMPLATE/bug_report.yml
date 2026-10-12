@@ -1,0 +1,85 @@
+name: Bug report
+description: Report something that isn't working as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The details below help us reproduce it locally.
+
+        Issues are public, so remove anything you don't want to share (internal paths, team names, credentials) from output and config before posting.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps, commands, or code that shows the problem. A link to a minimal example repository is ideal.
+      placeholder: |
+        1. Add `...` to package.yml
+        2. Run `bin/packwerk check`
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output
+      description: The full error message and backtrace, if there is one. This is formatted as code automatically, so there's no need for backticks.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: |
+        The version you're running. For a gem, the line from `Gemfile.lock` also tells us whether you got a precompiled build. If it didn't come from RubyGems, say where it came from (git ref, cargo, Homebrew, release binary, VS Code Marketplace).
+      placeholder: e.g. code_ownership (2.1.0-arm64-darwin)
+    validations:
+      required: true
+
+  - type: input
+    id: ruby-version
+    attributes:
+      label: Ruby version
+      description: Output of `ruby -v`. Leave blank if this tool doesn't use Ruby.
+      placeholder: e.g. ruby 3.4.5
+
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and CPU
+      description: Output of `ruby -e 'puts RUBY_PLATFORM'` if you have Ruby, otherwise your OS and CPU architecture. If this happens in Docker or CI, include the base image.
+      placeholder: e.g. arm64-darwin24, or aarch64-linux-musl (ruby:3.4-alpine in Docker)
+    validations:
+      required: true
+
+  - type: input
+    id: other-versions
+    attributes:
+      label: Other relevant versions
+      description: Any related dependencies, such as Rails, packwerk, RuboCop, or your editor.
+      placeholder: e.g. Rails 8.0.2, packwerk 3.2.1
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration
+      description: The contents of any config files involved, such as `package.yml`, `packwerk.yml`, `code_ownership.yml`, or a team file.
+      render: yaml
