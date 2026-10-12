@@ -10,6 +10,8 @@ body:
 
         **Issues in public repositories are visible to anyone.** Before posting, replace private details (file paths, pack and team names, private gem sources, internal image names, credentials) with placeholders like `packs/foo` and `TeamA`. A minimal example app is better than redacted output from a private one.
 
+        To report a security vulnerability, follow the [security policy](https://github.com/rubyatscale/.github/blob/main/SECURITY.md) instead of opening an issue.
+
   - type: textarea
     id: description
     attributes:
