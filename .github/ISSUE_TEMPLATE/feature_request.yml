@@ -3,6 +3,11 @@ description: Suggest a new feature or a change to existing behavior.
 labels: ["enhancement"]
 type: Feature
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issues in public repositories are visible to anyone.** In examples, replace private file paths, pack and team names with placeholders like `packs/foo` and `TeamA`.
+
   - type: textarea
     id: problem
     attributes:

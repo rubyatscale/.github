@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Ask a question
+  - name: Ruby/Rails Modularity Forum
     url: https://rubyrailsmodularity.com/
-    about: For usage questions and modularity discussion, ask in the Ruby/Rails Modularity Forum.
+    about: Questions and discussion about modularizing Ruby and Rails apps. For a question about one tool, check its README or Discussions tab first.
